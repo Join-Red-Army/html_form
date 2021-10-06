@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: #121212;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+/* секции */
+
+#form {
+  width: 620px;
+  margin: 20px auto;
+  /* border: 1px solid rgb(131, 131, 131); */
+}
+
+.form-section {
+  margin: 25px auto;
+  padding: 20px 35px;
+
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+
+  transition: border-color .2s linear;
+}
+
+.element-box {
+  margin-bottom: 10px;
+}
+
+.element-box.element-type {
+  margin-top: 20px;
+}
+
+.element-header {
+  margin-bottom: 10px;
+}
+
+.element-link {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #303030;
+}
+
+.element-link:hover {
+  cursor: pointer;
+  color: #6d6d6d;
+}
+
+/* отдельные элементы */
+.fieldset {
+  padding: 15px;
+}
+
+.fieldset label {
+  color: #b3b3b3;
+}
+
+.input {
+  color: #c400b4
+}

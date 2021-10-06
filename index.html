@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML form</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+</head>
+<body>
+
+<form id="form" action="/" method="POST">
+  
+  <!-- form -->
+  <section class="form-section">
+    <div class="element-header">
+      <h2><a class="element-link" href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/form">&#60;form&#62;</a></h2>
+      <div class="element-description">
+        Используется с двумя обязательными атрибутами: action и method.<br>
+        Следует также указать name, чтобы отделять её от других форм.<br>
+        Элементы внутри формы автоматически привязываются к ней.
+      </div>
+    </div>
+  </section>
+
+
+  <!-- fieldset -->
+  <!-- legend -->
+  <section class="form-section">
+
+    <div class="element-box">
+
+      <div class="element-header">
+        <h2><a class="element-link" href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/fieldset">&#60;fieldset&#62;</a></h2>
+        <div class="element-description">
+          Визуально группирует несколько элементов формы. Рамка вокруг примера ниже - это fieldset.<br>
+        </div>
+      </div>
+
+      <div class="element-header">
+        <h2><a class="element-link">&#60;legend&#62;</a></h2>
+        <div class="element-description">
+          Подпись для form или fieldset 
+        </div>
+      </div>
+
+      <div class="element-example">
+        <fieldset class="fieldset">
+          <legend>Legend!</legend>
+          <input type="radio" id="kraken" name="monster">
+          <label for="kraken">Kraken</label><br/>
+      
+          <input type="radio" id="sasquatch" name="monster">
+          <label for="sasquatch">Sasquatch</label><br/>
+      
+          <input type="radio" id="mothman" name="monster">
+          <label for="mothman">Mothman</label>
+        </fieldset>
+      </div>
+      
+    </div>
+
+  </section>
+
+
+  <!-- datalist -->
+  <section class="form-section">
+
+    <div class="element-box">
+
+      <div class="element-header">
+        <h2><a class="element-link"href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/datalist">&#60;datalist&#62;</a></h2>
+        <div class="element-description">
+          Работает как т9: при вводе текста будет предлагать предзаданные варианты.<br>
+          Внутри содержатся элементы option.<br>
+          Используется совместно с input.
+        </div>
+      </div>
+  
+      <div class="element-example">
+        <input list="colors" id="ice-cream-choice" name="ice-cream-choice" />
+        <label for="ice-cream-choice">- сhoose a color</label>
+
+        <datalist id="colors">
+          <option value="red">
+          <option value="orange">
+          <option value="yellow">
+          <option value="green">
+          <option value="blue">
+        </datalist>
+      </div>
+
+    </div>
+
+  </section>
+  
+
+  <!-- select -->
+  <!-- optgroup -->
+  <section class="form-section">
+    
+    <div class="element-box">
+      <div class="element-header">
+        <h2><a class=element-link href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/select">&#60;select&#62;</a></h2>
+        <div class="element-description">
+          Представляет собой список option, по которому можно кликнуть и выбрать один или несколько (атрибут multiple) предзаданных вариантов.
+        </div>
+      </div>
+
+      <div class="element-example">
+        <select name="select-name" id="select-id">
+          <option value="1">red</option>
+          <option value="2" selected>orange</option>
+          <option value="3">yellow</option>
+          <option value="4">green</option>
+          <option value="5">blue</option>
+        </select>
+        <label for="select-id">- сhoose a color</label>
+      </div>
+    </div>
+
+
+    <div class="element-box">
+      <div class="element-header">
+        <h2><a class=element-link href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/optgroup">&#60;optgroup&#62;</a></h2>
+        <div class="element-description">
+          Группирует опции внутри select.
+        </div>
+      </div>
+
+      <div class="element-example">
+        <select name="select-optgroup" id="select-optgroup-id">
+          <optgroup label="Hot">
+            <option value="1">red</option>
+            <option value="2" selected>orange</option>
+            <option value="3">yellow</option>
+          </optgroup>
+          <optgroup label="Cool">
+            <option value="4">green</option>
+            <option value="4">blue</option>
+          </optgroup>
+        </select>
+        <label for="select-optgroup-id">- сhoose from optgroup</label>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- progress -->
+  <section class="form-section">
+
+    <div class="element-box">
+      <div class="element-header">
+        <h2><a class=element-link href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/progress">&#60;progress&#62;</a></h2>
+        <div class="element-description">
+          Показывающий ход выполнения задачи.<br>
+          Внутри атрибуты: max, value.
+        </div>
+      </div>
+
+      <div class="element-example">
+        <progress value="70" max="100">70%</progress>
+      </div>
+    </div>
+
+
+    <div class="element-box">
+      <div class="element-header">
+        <h2><a class=element-link href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/meter">&#60;meter&#62;</a></h2>
+        <div class="element-description">
+          В зависимости от значения, цвет полосы будет меняться.<br>
+          Внутри атрибуты: min, max, low, high, optimum и value.
+        </div>
+      </div>
+
+      <div class="element-example">
+        <meter min="0" max="100" low="33" high="66" optimum="80" value="85">85</meter>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- button -->
+  <section class="form-section">
+
+    <div class="element-box">
+      <div class="element-header">
+        <h2><a class=element-link href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/button">&#60;button&#62;</a></h2>
+        <div class="element-description">
+          Кнопки могут создаваться через теги input или button<br>
+          Атрибуты type: button, submit, reset, которые:
+        </div>
+      </div>
+
+      <div class="element-example">
+        <button type="button">Ничего не делает</button>
+        <button type="submit">Отправляет форму</button>
+        <button type="reset">Сбрасывает форму</button>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- самый большой элемент -->
+  <!-- input -->
+  <div class="form-section">
+
+    <div class="element-box">
+      <div class="element-header">
+        <h2><a class="element-link input" href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/Input">&#60;input&#62;</a></h2>
+        <div class="element-description">
+          Для получения информации от пользователя<br>
+          Главный атрибут - type.<br>
+          У type множество значений.
+        </div>
+      </div>
+    </div>
+
+    <!-- text -->
+    <div class="element-box element-type">
+      <div class="element-header">
+        <h2><a class="element-link" href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/Input">text</a></h2>
+        <div class="element-description">
+          Ввод любой небольшой строки<br>
+          Значение по умолчанию<br>
+        </div>
+      </div>
+      <div class="element-example">
+        <input type="text" placeholder="любая строка...">
+      </div>
+    </div>
+
+    <!-- password -->
+    <div class="element-box element-type">
+      <div class="element-header">
+        <h2><a class="element-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password">password</a></h2>
+        <div class="element-description">
+          Любые значения.<br>
+          Поле защищено.
+        </div>
+      </div>
+      <div class="element-example">
+        <input type="password" value="password">
+      </div>
+    </div>
+
+    <!-- number -->
+    <!-- tel -->
+    <!-- email -->
+    <div class="element-box element-type">
+      <div class="element-header">
+        <h2><a class="element-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number">number</a>, 
+        <a class="element-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel">tel</a>,
+        <a class="element-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email">email</a></h2>
+        <div class="element-description">
+          Ну соответственно.
+        </div>
+      </div>
+      <div class="element-example">
+        <input type="number" value="42">
+        <input type="tel" placeholder="+7 (123) 756-35-24"> 
+        <input type="email" placeholder="mail@mail.com">
+      </div>
+    </div>
+
+    <!-- search -->
+    <div class="element-box element-type">
+      <div class="element-header">
+        <h2><a class="element-link" href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/input/search">search</a></h2>
+        <div class="element-description">
+          Поле для поисковых запросов.<br>
+          Браузеры могут прикрутить не стандартное свойство onSearch.
+        </div>
+      </div>
+      <div class="element-example">
+        <input type="search" placeholder="искать смыслы">
+      </div>
+    </div>
+
+    <!-- radio -->
+    <div class="element-box element-type">
+      <div class="element-header">
+        <h2><a class="element-link" href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/radio">radio</a></h2>
+        <div class="element-description">
+          Выбрать только один вариант из предложенных.<br>
+          Используется совмстно с label.
+        </div>
+      </div>
+      <div class="element-example">
+        <fieldset class="fieldset">
+          <input type="radio" id="kraken2" name="monster">
+          <label for="kraken2">Kraken</label><br/>
+      
+          <input type="radio" id="sasquatch2" name="monster">
+          <label for="sasquatch2">Sasquatch</label><br/>
+      
+          <input type="radio" id="mothman2" name="monster">
+          <label for="mothman2">Mothman</label>
+        </fieldset> 
+      </div>
+    </div>
+
+    <!-- checkbox -->
+    <div class="element-box element-type">
+      <div class="element-header">
+        <h2><a class="element-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">checkbox</a></h2>
+        <div class="element-description">
+          Выбрать только несколько вариантов из предложенных.<br>
+          Используется совместно с label.
+        </div>
+      </div>
+      <div class="element-example">
+        <fieldset class="fieldset">
+          <input type="checkbox" id="kraken3" name="monster">
+          <label for="kraken3">Kraken</label><br/>
+      
+          <input type="checkbox" id="sasquatch3" name="monster">
+          <label for="sasquatch3">Sasquatch</label><br/>
+      
+          <input type="checkbox" id="mothman3" name="monster">
+          <label for="mothman3">Mothman</label>
+        </fieldset> 
+      </div>
+    </div>
+
+    <!-- submit -->
+    <!-- reset -->
+    <!-- image -->
+    <div class="element-box element-type">
+      <div class="element-header">
+        <h2>
+          <a class="element-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit">submit</a>,
+          <a class="element-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset">reset</a>,
+          <a class="element-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image">image</a>,
+        </h2>
+        <div class="element-description">
+          Кнопки для отправки и сброса формы.<br>
+          Кнопки могут создаваться через теги input или button
+        </div>
+      </div>
+      <div class="element-example">
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+      </div>
+    </div>
+
+    <!-- file -->
+    <div class="element-box element-type">
+      <div class="element-header">
+        <h2>
+          <a class="element-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file">file</a>
+        </h2>
+        <div class="element-description">
+          Выбрать и прикрепить к форме файл
+        </div>
+      </div>
+      <div class="element-example">
+        <input type="file">
+      </div>
+    </div>
+
+    <div class="element-box element-type">
+      <div class="element-header">
+        <h2>
+          <a class="element-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">range</a>
+        </h2>
+        <div class="element-description">
+          Такой вот бегунок.<br>
+          Внутри устанавливаются значения min, max, value, step.
+        </div>
+      </div>
+      <div class="element-example">
+        <input type="range">
+      </div>
+    </div>
+
+  </div>
+</form>
+
+</body>
+
+</html>
